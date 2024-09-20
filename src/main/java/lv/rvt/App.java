@@ -34,19 +34,63 @@ public class App
 
 
 
-        Scanner scanner = new Scanner(System.in);
+        // Scanner scanner = new Scanner(System.in);
         
-        System.out.println("labdien students!");
-        System.out.println("Ievadiet savu vārdu: ");
-        String name = scanner.nextLine();
+        // System.out.println("labdien students!");
+        // System.out.println("Ievadiet savu vārdu: ");
+        // String name = scanner.nextLine();
 
-        System.out.println("ievadiet savu uzvārdu: ");
-        String surname = scanner.nextLine();
+        // System.out.println("ievadiet savu uzvārdu: ");
+        // String surname = scanner.nextLine();
 
-        System.out.println("ievadiet savu gruppu: ");
-        String grupa = scanner.nextLine();
+        // System.out.println("ievadiet savu gruppu: ");
+        // String grupa = scanner.nextLine();
 
-        System.out.println("Students: " + name + " " + surname + ", grupa: " + grupa);
+        // System.out.println("Students: " + name + " " + surname + ", grupa: " + grupa);
+
+
+
+        // Scanner scanner = new Scanner(System.in);
+        // System.out.println("Write text abd press enter: ");
+        // String input = scanner.nextLine();
+
+        // int inputAsInteger = Integer.valueOf(input);
+
+        // System.out.println("You wrote: " + inputAsInteger);
+
+
+
+        // Scanner scanner = new Scanner(System.in);
+
+        // int number1= Integer.valueOf(scanner.nextLine());
+        // int number2= Integer.valueOf(scanner.nextLine());
+        // // Izvada divu skaitļu summu
+        // int summa = number1 + number2;
+        // // Izvada divu skaitļa reizinājumu
+        // int reiz = number1 * number2;
+        // // Izvada skaitļu dalīšanu // 3/2
+        // double dalisana = Double.valueOf(number1) / number2;
+        // // vai
+        // // double dalisana = (double) number1 / number2;
+        
+        // System.out.println(number1 + " + " + number2 + " = " + summa);
+        // System.out.println(number1 + " * " + number2 + " = " + reiz);
+        // System.out.println(number1 + " / " + number2 + " = " + dalisana);
+
+
+
+        // Scanner scanner = new Scanner(System.in);
+
+        // System.out.println("Give speed:");
+        // int speed = Integer.valueOf(scanner.nextLine());
+        // if (speed > 90) {
+        //     System.out.println("Speeding ticket!");
+        // }
+        // else {
+        //     System.out.println("Speed is normal");
+        // }
+
+
     }
 
 }
