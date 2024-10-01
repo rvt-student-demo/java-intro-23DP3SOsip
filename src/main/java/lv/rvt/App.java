@@ -169,17 +169,27 @@ public class App
 
 
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Input number");
-        int count = Integer.valueOf(scanner.nextLine());
-        System.out.println();
-        int numbers = 0;
+        // Scanner scanner = new Scanner(System.in);
+        // System.out.println("Input number");
+        // int count = Integer.valueOf(scanner.nextLine());
+        // System.out.println();
+        // int numbers = 0;
         
-        while (numbers < count+1) {
-            System.out.println(numbers);
-            numbers++;
-        }
+        // while (numbers < count+1) {
+        //     System.out.println(numbers);
+        //     numbers++;
+        // }
 
+
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Last number?: ");
+        int lastnumber = Integer.valueOf(scanner.nextLine());
+        int sum = 0;
+        for (int i = 0; i <= lastnumber; i++) {
+            sum = sum + i;
+        }
+        System.out.println("The sum is: " + sum);
     }
 
 }
