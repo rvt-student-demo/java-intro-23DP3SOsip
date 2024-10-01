@@ -148,23 +148,36 @@ public class App
 
 
 
-        Scanner scanner = new Scanner(System.in);
-        int count  = 0;
-        int sum = 0;
+        // Scanner scanner = new Scanner(System.in);
+        // int count  = 0;
+        // int sum = 0;
 
-        while (true) {
-            System.out.println("Input number");
-            int number = Integer.valueOf(scanner.nextLine());
-            if (number != 0) {
-                sum = sum + number;
-                count = count + 1;
-            }
-            if (number == 0) {
-                System.out.println("Number of numbers is: " + count);
-                System.out.println("The sum of the numbers is: " + sum);
-                break;
-            }
+        // while (true) {
+        //     System.out.println("Input number");
+        //     int number = Integer.valueOf(scanner.nextLine());
+        //     if (number != 0) {
+        //         sum = sum + number;
+        //         count = count + 1;
+        //     }
+        //     if (number == 0) {
+        //         System.out.println("Number of numbers is: " + count);
+        //         System.out.println("The sum of the numbers is: " + sum);
+        //         break;
+        //     }
             
+        // }
+
+
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Input number");
+        int count = Integer.valueOf(scanner.nextLine());
+        System.out.println();
+        int numbers = 0;
+        
+        while (numbers < count+1) {
+            System.out.println(numbers);
+            numbers++;
         }
 
     }
