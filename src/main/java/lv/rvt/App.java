@@ -182,14 +182,47 @@ public class App
 
 
 
+        // Scanner scanner = new Scanner(System.in);
+        // System.out.println("Last number?: ");
+        // int lastnumber = Integer.valueOf(scanner.nextLine());
+        // int sum = 0;
+        // for (int i = 0; i <= lastnumber; i++) {
+        //     sum = sum + i;
+        // }
+        // System.out.println("The sum is: " + sum);
+
+        // Scanner scanner = new Scanner(System.in);
+        // for (int x = 10; x < 100; x+=10) {
+        //     System.out.println(x);
+        // }
+
+
+
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Last number?: ");
-        int lastnumber = Integer.valueOf(scanner.nextLine());
+        int count  = 0;
         int sum = 0;
-        for (int i = 0; i <= lastnumber; i++) {
-            sum = sum + i;
+        int even = 0;
+        int odd = 0;
+        while (true) {
+            System.out.println("Input number");
+            int number = Integer.valueOf(scanner.nextLine());
+            if (number == -1) {;
+                System.out.println("Thx! Bye!");
+                System.out.println("Sum: " + sum);
+                System.out.println("Numbers: " + count);
+                System.out.println("Avarege: " + (double)sum/count);
+                System.out.println("Even: " + even);
+                System.out.println("Odd: " + odd);
+                break;
+            }
+            sum = sum + number;
+            count = count + 1;
+            if (number % 2 == 0) {
+                even++;
+              } else {
+                odd++;
+              }
         }
-        System.out.println("The sum is: " + sum);
     }
 
 }
