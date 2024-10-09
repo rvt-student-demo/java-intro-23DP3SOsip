@@ -198,31 +198,63 @@ public class App
 
 
 
-        Scanner scanner = new Scanner(System.in);
-        int count  = 0;
-        int sum = 0;
-        int even = 0;
-        int odd = 0;
-        while (true) {
-            System.out.println("Input number");
-            int number = Integer.valueOf(scanner.nextLine());
-            if (number == -1) {;
-                System.out.println("Thx! Bye!");
-                System.out.println("Sum: " + sum);
-                System.out.println("Numbers: " + count);
-                System.out.println("Avarege: " + (double)sum/count);
-                System.out.println("Even: " + even);
-                System.out.println("Odd: " + odd);
-                break;
-            }
-            sum = sum + number;
-            count = count + 1;
-            if (number % 2 == 0) {
-                even++;
-              } else {
-                odd++;
-              }
-        }
-    }
+        // Scanner scanner = new Scanner(System.in);
+        // System.out.println("Input number");
+        // int count  = 0;
+        // int sum = 0;
+        // int even = 0;
+        // int odd = 0;
+        // while (true) {
+        //     int number = Integer.valueOf(scanner.nextLine());
+        //     if (number == -1) {;
+        //         System.out.println("Thx! Bye!");
+        //         System.out.println("Sum: " + sum);
+        //         System.out.println("Numbers: " + count);
+        //         System.out.println("Avarege: " + (double)sum/count);
+        //         System.out.println("Even: " + even);
+        //         System.out.println("Odd: " + odd);
+        //         break;
+        //     }
+        //     sum = sum + number;
+        //     count = count + 1;
+        //     if (number % 2 == 0) {
+        //         even++;
+        //       } else {
+        //         odd++;
+        //       }
+        // }
 
+        
+
+            // #1
+            // Scanner scanner = new Scanner(System.in);
+            // System.out.println("How many times?");
+            // int times = Integer.valueOf(scanner.nextLine());
+            // printText(times);
+            
+
+
+            // #2
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Write beginning number: ");
+            int first = Integer.valueOf(scanner.nextLine());
+            System.out.println("Write end number: ");
+            int second = Integer.valueOf(scanner.nextLine());
+            System.out.println();
+            divisibleByThreeInRange(first, second);
+        }
+        //     #1
+        //     public static void printText(int times) {
+        //     for(int count = 0; count < times; count++) {
+        //         System.out.println("In a hole in the ground there lived a method");
+        //     }
+        // }
+
+        public static void divisibleByThreeInRange(int beginning, int end){
+            for (int i = beginning; i <= end; i++) {
+                if (i % 3 == 0) {
+                    System.out.println(i);
+                }
+            }
+        }
 }
