@@ -1,6 +1,7 @@
 package lv.rvt;
 
 public class Stars {
+                                                                            // Star sign (4 parts)
     public static void printStars(int number) {
         for (int i = 0; i < number ;i++) {
             System.out.print("*");
@@ -22,6 +23,34 @@ public class Stars {
     public static void printTriangle(int size){
         for (int i = 0; i <= size ; i++){
             printStars(i);
+        }
+    }
+
+
+
+                                                                        // Advanced astrology (3 parts)
+    public static void printSpaces(int number) {
+        for (int i = 0; i <= number; i++){
+            System.out.print(" ");
+
+        }
+    }
+
+    public static void printRightTriangle(int size){
+        for (int i = 0; i <= size ; i++){
+            printSpaces(size - i);
+            printStars(i);
+        }
+    }
+    
+    public static void christmasTree(int height){
+        for (int i = 0; i <= height; i++){
+            printSpaces(height - i);
+            printStars(i+(i-1));
+        }
+        for (int i = 0; i < 2; i++) {
+            printSpaces(height - 2);
+            printStars(3);
         }
     }
 }

@@ -249,10 +249,16 @@ public class App
 
 
                                                                             // Star sign (4 parts)
-        Stars.printStars(5);
-        Stars.printSquare(4);
-        Stars.printRectangle(17, 3);
-        Stars.printTriangle(4);
+        // Stars.printStars(5);
+        // Stars.printSquare(4);
+        // Stars.printRectangle(17, 3);
+        // Stars.printTriangle(4);
+
+                                                                        // Advanced astrology (3 parts)
+        // Stars.printSpaces(5);
+        // Stars.printRightTriangle(4);
+        Stars.christmasTree(4);
+
         }
         //     #1
         //     public static void printText(int times) {
