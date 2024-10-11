@@ -34,6 +34,7 @@ public class App
 
 
 
+                                                                                            // Uzdevums 0
         // Scanner scanner = new Scanner(System.in);
         
         // System.out.println("labdien students!");
@@ -59,7 +60,7 @@ public class App
         // System.out.println("You wrote: " + inputAsInteger);
 
 
-
+                                                                            // summa reizinasana dalisana
         // Scanner scanner = new Scanner(System.in);
 
         // int number1= Integer.valueOf(scanner.nextLine());
@@ -78,7 +79,8 @@ public class App
         // System.out.println(number1 + " / " + number2 + " = " + dalisana);
 
 
-
+        
+                                                                                // speeding ticket
         // Scanner scanner = new Scanner(System.in);
 
         // System.out.println("Give speed:");
@@ -91,6 +93,8 @@ public class App
         // }
 
 
+
+                                                                                // Grades and Points
         // Scanner scanner = new Scanner(System.in);
 
         // System.out.println("Give points [0-100]:");
@@ -121,7 +125,7 @@ public class App
         // }
 
 
-
+                                                                                     // Gift tax
         //     Scanner scanner = new Scanner(System.in);
 
         //     System.out.println("Value of the gift?: ");
@@ -147,7 +151,7 @@ public class App
         //     }
 
 
-
+                                                                        // Number and sum of numbers
         // Scanner scanner = new Scanner(System.in);
         // int count  = 0;
         // int sum = 0;
@@ -168,7 +172,7 @@ public class App
         // }
 
 
-
+                                                                                // Counting
         // Scanner scanner = new Scanner(System.in);
         // System.out.println("Input number");
         // int count = Integer.valueOf(scanner.nextLine());
@@ -182,6 +186,7 @@ public class App
 
 
 
+                                                                            // Sum of a sequence
         // Scanner scanner = new Scanner(System.in);
         // System.out.println("Last number?: ");
         // int lastnumber = Integer.valueOf(scanner.nextLine());
@@ -198,6 +203,7 @@ public class App
 
 
 
+                                                            // Repeating, breaking and remembering (5 parts)
         // Scanner scanner = new Scanner(System.in);
         // System.out.println("Input number");
         // int count  = 0;
@@ -226,22 +232,27 @@ public class App
 
         
 
-            // #1
-            // Scanner scanner = new Scanner(System.in);
-            // System.out.println("How many times?");
-            // int times = Integer.valueOf(scanner.nextLine());
-            // printText(times);
-            
+        // #1
+        // Scanner scanner = new Scanner(System.in);
+        // System.out.println("How many times?");
+        // int times = Integer.valueOf(scanner.nextLine());
+        // printText(times);
+        
+                                                                            // Divisible by three
+        // Scanner scanner = new Scanner(System.in);
+        // System.out.println("Write beginning number: ");
+        // int first = Integer.valueOf(scanner.nextLine());
+        // System.out.println("Write end number: ");
+        // int second = Integer.valueOf(scanner.nextLine());
+        // System.out.println();
+        // divisibleByThreeInRange(first, second);
 
 
-            // #2
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Write beginning number: ");
-            int first = Integer.valueOf(scanner.nextLine());
-            System.out.println("Write end number: ");
-            int second = Integer.valueOf(scanner.nextLine());
-            System.out.println();
-            divisibleByThreeInRange(first, second);
+                                                                            // Star sign (4 parts)
+        Stars.printStars(5);
+        Stars.printSquare(4);
+        Stars.printRectangle(17, 3);
+        Stars.printTriangle(4);
         }
         //     #1
         //     public static void printText(int times) {
@@ -250,11 +261,12 @@ public class App
         //     }
         // }
 
-        public static void divisibleByThreeInRange(int beginning, int end){
-            for (int i = beginning; i <= end; i++) {
-                if (i % 3 == 0) {
-                    System.out.println(i);
-                }
-            }
-        }
+                                                                            // Divisible by three
+        // public static void divisibleByThreeInRange(int beginning, int end){
+        //     for (int i = beginning; i <= end; i++) {
+        //         if (i % 3 == 0) {
+        //             System.out.println(i);
+        //         }
+        //     }
+        // }
 }
