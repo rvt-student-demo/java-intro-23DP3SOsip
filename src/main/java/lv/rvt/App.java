@@ -1,6 +1,7 @@
 package lv.rvt;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class App 
 {
@@ -257,9 +258,37 @@ public class App
                                                                         // Advanced astrology (3 parts)
         // Stars.printSpaces(5);
         // Stars.printRightTriangle(4);
-        Stars.christmasTree(4);
+        // Stars.christmasTree(4);
 
+                                                                        // Third element in list
+        // ArrayList<String> wordList = new ArrayList<>();
+        // wordList.add("Tomas");
+        // wordList.add("Emma");
+        // wordList.add("Aleks");
+        // wordList.add("Marry");
+        // System.out.println(wordList.get(2));
+        // wordList.remove(0);
+        // System.out.println(wordList.get(2));
+
+
+                                                                            //Second plus third
+        Scanner numbers = new Scanner(System.in);
+        ArrayList<Integer> numberList = new ArrayList<>();
+
+        System.out.println("ievadi ciparus atdalot ar ,");
+        String input = numbers.nextLine();
+        String[] parts = input.split(",");
+
+        for (String part : parts) {
+            numberList.add(Integer.parseInt(part.trim()));
         }
+        int sum = 0;
+        for (Integer i : numberList) {
+            sum += i;
+        }
+        System.out.println(numberList);
+        System.out.println("Summa: " + sum);
+    }
         //     #1
         //     public static void printText(int times) {
         //     for(int count = 0; count < times; count++) {
