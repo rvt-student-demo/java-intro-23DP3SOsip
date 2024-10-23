@@ -260,7 +260,7 @@ public class App
         // Stars.printRightTriangle(4);
         // Stars.christmasTree(4);
 
-                                                                            // Third element in list
+                                                                        // Third element in list
         // ArrayList<String> wordList = new ArrayList<>();
         // wordList.add("Tomas");
         // wordList.add("Emma");
@@ -300,23 +300,38 @@ public class App
         ArrayList<Integer> numberList = new ArrayList<>();
 
         System.out.println("ievadi ciparus: ");
-        while (true){
-            int cipari = Integer.valueOf(numbers.nextLine());
-            if (cipari == -1){
-                break;
-            }
-            else {
-                numberList.add(cipari);
+
+        while (true) {
+            try {
+                int cipari = Integer.valueOf(numbers.nextLine());
+                if (cipari == -1) {
+                    break;
+                } else {
+                    numberList.add(cipari);
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Nepareiza ievadīšana. Lūdzu, ievadiet derīgu veselu skaitli.");
             }
         }
-        System.out.println("Saraksta izmers: "+ numberList.size());
-        System.out.println("From where?");
-        int m1 = Integer.valueOf(numbers.nextLine());
-        System.out.println("To where?");
-        int m2 = Integer.valueOf(numbers.nextLine());
-        for (int i = m1; i <= m2; i++) {
-            System.out.println("Your numbers from the array: "+ numberList.get(i));
+
+        System.out.println("Saraksta izmers: " + numberList.size());
+
+        try {
+            System.out.println("From where?");
+            int m1 = Integer.valueOf(numbers.nextLine());
+
+            System.out.println("To where?");
+            int m2 = Integer.valueOf(numbers.nextLine());
+
+            for (int i = m1; i <= m2; i++) {
+                System.out.println("Jūsu skaitļi no masīva: " + numberList.get(i));
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("Nepareiza ievadīšana. Lūdzu, ievadiet derīgu veselu skaitli.");
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Indekss ir ārpus diapazona. Lūdzu, ievadiet derīgus indeksus masīva lieluma robežās.");
         }
+                                                                    
     }
         //     #1
         //     public static void printText(int times) {
