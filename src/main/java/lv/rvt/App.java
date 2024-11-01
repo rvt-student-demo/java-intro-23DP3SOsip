@@ -2,6 +2,7 @@ package lv.rvt;
 
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class App 
 {
@@ -296,42 +297,133 @@ public class App
 
 
                                                                         // Only these numbers
-        Scanner numbers = new Scanner(System.in);
-        ArrayList<Integer> numberList = new ArrayList<>();
+        // Scanner numbers = new Scanner(System.in);
+        // ArrayList<Integer> numberList = new ArrayList<>();
 
-        System.out.println("ievadi ciparus: ");
+        // System.out.println("ievadi ciparus: ");
 
+        // while (true) {
+        //     try {
+        //         int cipari = Integer.valueOf(numbers.nextLine());
+        //         if (cipari == -1) {
+        //             break;
+        //         } else {
+        //             numberList.add(cipari);
+        //         }
+        //     } catch (NumberFormatException e) {
+        //         System.out.println("Nepareiza ievadīšana. Lūdzu, ievadiet derīgu veselu skaitli.");
+        //     }
+        // }
+
+        // System.out.println("Saraksta izmers: " + numberList.size());
+
+        // try {
+        //     System.out.println("From where?");
+        //     int m1 = Integer.valueOf(numbers.nextLine());
+
+        //     System.out.println("To where?");
+        //     int m2 = Integer.valueOf(numbers.nextLine());
+
+        //     for (int i = m1; i <= m2; i++) {
+        //         System.out.println("Jūsu skaitļi no masīva: " + numberList.get(i));
+        //     }
+        // } catch (NumberFormatException e) {
+        //     System.out.println("Nepareiza ievadīšana. Lūdzu, ievadiet derīgu veselu skaitli.");
+        // } catch (IndexOutOfBoundsException e) {
+        //     System.out.println("Indekss ir ārpus diapazona. Lūdzu, ievadiet derīgus indeksus masīva lieluma robežās.");
+        // }
+
+
+                                                                                // Print in range
+        // ArrayList<Integer> numbers = new ArrayList<>();
+        // numbers.add(3);
+        // numbers.add(2);
+        // numbers.add(6);
+        // numbers.add(-1);
+        // numbers.add(5);
+        // numbers.add(1);
+
+        // System.out.println("The numbers in the range [0, 5]");
+        // printNumbersInRange(numbers, 0, 5);
+
+        // System.out.println("The numbers in the range [3, 10]");
+        // printNumbersInRange(numbers, 3, 10);
+
+
+                                                                            //Work with array
+        // Random random = new Random();
+        // int[] numbers = new int[10];
+        // for (int r = 0; r < 10; r++) {
+        //     numbers[r] = random.nextInt(10);
+        // }
+            
+        // for (int i = 0; i < numbers.length; i++) {
+        //     System.out.print(numbers[i]+ " ");
+        // }
+        // int sum = 0;
+        // int liel = numbers[0];
+        // int maz = numbers[0];
+        // for (int number : numbers){
+        //     if (number < maz) {
+        //         maz = number;
+        //     }
+        //     if (number > liel) {
+        //         liel = number;
+        //     }
+        //     sum += number;
+        // }
+
+        // System.out.println();
+        // System.out.println("Mazākais: "+ maz);
+        // System.out.println("Lielakais: "+ liel);
+        // System.out.println("Summa: "+ sum);
+        // System.out.println("AVG: "+ (1.0 * sum/numbers.length));
+        
+        
+                                                                                //Variable swap
+        // int[] intArr = {2,9};
+        
+        // int temp = intArr[0];
+
+        // intArr[0] = intArr[1];
+        // intArr[1] = temp;
+
+
+        // for (int i = 0; i < intArr.length; i++){
+        //     System.out.print(intArr[i]+ " ");
+        // }
+
+
+                                                                                    //Bubble Sort
+        // int[] masivs = {4,1,5,8,9,0,2,7,3,6};
+        // BubbleSort(masivs);
+        
+
+                                                                                   //Personal details
+        Scanner reader = new Scanner(System.in);
+        int sum = 0;
+        int count = 0;
+        String longest = ""; 
         while (true) {
-            try {
-                int cipari = Integer.valueOf(numbers.nextLine());
-                if (cipari == -1) {
-                    break;
-                } else {
-                    numberList.add(cipari);
+            String input = reader.nextLine();
+            if (input.equals("q")) {
+                break;
+            }
+        
+            String[] parts = input.split(",");
+            sum = sum + Integer.valueOf(parts[1]);
+            count = count + 1;
+            
+            for (String part : parts){
+                if(part.length() >= longest.length()){
+                    longest = part;
                 }
-            } catch (NumberFormatException e) {
-                System.out.println("Nepareiza ievadīšana. Lūdzu, ievadiet derīgu veselu skaitli.");
             }
         }
-
-        System.out.println("Saraksta izmers: " + numberList.size());
-
-        try {
-            System.out.println("From where?");
-            int m1 = Integer.valueOf(numbers.nextLine());
-
-            System.out.println("To where?");
-            int m2 = Integer.valueOf(numbers.nextLine());
-
-            for (int i = m1; i <= m2; i++) {
-                System.out.println("Jūsu skaitļi no masīva: " + numberList.get(i));
-            }
-        } catch (NumberFormatException e) {
-            System.out.println("Nepareiza ievadīšana. Lūdzu, ievadiet derīgu veselu skaitli.");
-        } catch (IndexOutOfBoundsException e) {
-            System.out.println("Indekss ir ārpus diapazona. Lūdzu, ievadiet derīgus indeksus masīva lieluma robežās.");
+        System.out.println("Lielakais vards: "+ longest);
+        if (count > 0) {
+            System.out.println("AVG dzimasanas diena: " + (1.0 * sum / count));
         }
-                                                                    
     }
         //     #1
         //     public static void printText(int times) {
@@ -347,5 +439,33 @@ public class App
         //             System.out.println(i);
         //         }
         //     }
+        // }
+
+                                                                            // Print in range
+        // public static void printNumbersInRange(ArrayList<Integer> numbers, int lowerLimit, int upperLimit){
+        //     for(int number : numbers){
+        //         if (number >= lowerLimit && number <= upperLimit){
+        //             System.out.println(number);
+        //         }
+        //     }
+        // }
+        
+        
+                                                                                //Bubble Sort
+        // public static int[] BubbleSort(int[] array) {
+        //     int length = array.length;
+        //     for (int i = 0; i < length; i++){
+        //         for (int j = 0; j<length-1; j++){
+        //             if (array[j]> array[j+1]){
+        //                 int temp = array[j];
+        //                 array[j] = array[j+1];
+        //                 array[j+1] = temp;
+        //             }
+        //         }
+        //     }
+        //     for (int i = 0; i < array.length; i++){
+        //         System.out.print(array[i]+" ");
+        //     }
+        //     return array;
         // }
 }
