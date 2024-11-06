@@ -427,21 +427,32 @@ public class App
 
 
                                                                                 // Your first account
-        Account artosAccount = new Account("Arto's account", 100.00);
-        Account artosSwissAccount = new Account("Arto's account in Switzerland", 1000000.00);
+        // Account artosAccount = new Account("Arto's account", 100.00);
+        // Account artosSwissAccount = new Account("Arto's account in Switzerland", 1000000.00);
 
-        System.out.println("Initial state");
-        System.out.println(artosAccount);
-        System.out.println(artosSwissAccount);
+        // System.out.println("Initial state");
+        // System.out.println(artosAccount);
+        // System.out.println(artosSwissAccount);
 
-        artosAccount.withdraw(20);
-        System.out.println("The balance of Arto's account is now: " + artosAccount.balance());
-        artosSwissAccount.deposit(200);
-        System.out.println("The balance of Arto's other account is now: " + artosSwissAccount.balance());
+        // artosAccount.withdraw(20);
+        // System.out.println("The balance of Arto's account is now: " + artosAccount.balance());
+        // artosSwissAccount.deposit(200);
+        // System.out.println("The balance of Arto's other account is now: " + artosSwissAccount.balance());
 
-        System.out.println("End state");
-        System.out.println(artosAccount);
-        System.out.println(artosSwissAccount);
+        // System.out.println("End state");
+        // System.out.println(artosAccount);
+        // System.out.println(artosSwissAccount);
+
+
+                                                                            // Your first bank transfer
+        Account name1 = new Account("Matthews account", 1000);
+        Account name2 = new Account("My account", 0);
+        name1.withdraw(100);
+        name2.deposit(100);
+        System.out.println();
+        System.out.println(name1);
+        System.out.println("-----------------------------------");
+        System.out.println(name2);
 
     }
         //     #1
