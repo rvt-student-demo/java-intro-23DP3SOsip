@@ -400,30 +400,49 @@ public class App
         
 
                                                                                    //Personal details
-        Scanner reader = new Scanner(System.in);
-        int sum = 0;
-        int count = 0;
-        String longest = ""; 
-        while (true) {
-            String input = reader.nextLine();
-            if (input.equals("q")) {
-                break;
-            }
+        // Scanner reader = new Scanner(System.in);
+        // int sum = 0;
+        // int count = 0;
+        // String longest = ""; 
+        // while (true) {
+        //     String input = reader.nextLine();
+        //     if (input.equals("q")) {
+        //         break;
+        //     }
         
-            String[] parts = input.split(",");
-            sum = sum + Integer.valueOf(parts[1]);
-            count = count + 1;
+        //     String[] parts = input.split(",");
+        //     sum = sum + Integer.valueOf(parts[1]);
+        //     count = count + 1;
             
-            for (String part : parts){
-                if(part.length() >= longest.length()){
-                    longest = part;
-                }
-            }
-        }
-        System.out.println("Lielakais vards: "+ longest);
-        if (count > 0) {
-            System.out.println("AVG dzimasanas diena: " + (1.0 * sum / count));
-        }
+        //     for (String part : parts){
+        //         if(part.length() >= longest.length()){
+        //             longest = part;
+        //         }
+        //     }
+        // }
+        // System.out.println("Lielakais vards: "+ longest);
+        // if (count > 0) {
+        //     System.out.println("AVG dzimasanas diena: " + (1.0 * sum / count));
+        // }
+
+
+                                                                                // Your first account
+        Account artosAccount = new Account("Arto's account", 100.00);
+        Account artosSwissAccount = new Account("Arto's account in Switzerland", 1000000.00);
+
+        System.out.println("Initial state");
+        System.out.println(artosAccount);
+        System.out.println(artosSwissAccount);
+
+        artosAccount.withdraw(20);
+        System.out.println("The balance of Arto's account is now: " + artosAccount.balance());
+        artosSwissAccount.deposit(200);
+        System.out.println("The balance of Arto's other account is now: " + artosSwissAccount.balance());
+
+        System.out.println("End state");
+        System.out.println(artosAccount);
+        System.out.println(artosSwissAccount);
+
     }
         //     #1
         //     public static void printText(int times) {
