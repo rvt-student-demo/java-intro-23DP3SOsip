@@ -445,15 +445,29 @@ public class App
 
 
                                                                             // Your first bank transfer
-        Account name1 = new Account("Matthews account", 1000);
-        Account name2 = new Account("My account", 0);
-        name1.withdraw(100);
-        name2.deposit(100);
-        System.out.println();
-        System.out.println(name1);
-        System.out.println("-----------------------------------");
-        System.out.println(name2);
+        // Account name1 = new Account("Matthews account", 1000);
+        // Account name2 = new Account("My account", 0);
+        // name1.withdraw(100);
+        // name2.deposit(100);
+        // System.out.println();
+        // System.out.println(name1);
+        // System.out.println("-----------------------------------");
+        // System.out.println(name2);
 
+
+                                                                                    // Person
+        // Person ada = new Person("Ada");
+        // Person antti = new Person("Antti");
+        // Person martin = new Person("Martin");
+
+        // ada.printPerson();
+        // antti.printPerson();
+        // martin.printPerson();
+
+
+                                                                                    // Product
+        Product banana = new Product("Banana", 1.1, 13);
+        banana.printProduct();
     }
         //     #1
         //     public static void printText(int times) {
