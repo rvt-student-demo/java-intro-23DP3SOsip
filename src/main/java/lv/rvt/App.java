@@ -521,40 +521,96 @@ public class App
         // part3.printValue();
 
 
-        //Statistics
-        Statistics statistics1 = new Statistics();
-        statistics1.addNumber(3);
-        statistics1.addNumber(5);
-        statistics1.addNumber(1);
-        statistics1.addNumber(2);
-        System.out.println("Count: " + statistics1.getCount());
-        System.out.println("Sum: " + statistics1.sum());
-        System.out.println("Average: " + statistics1.average());
-        System.out.println();
+                                                                                            //Statistics (4 parts)
+        // Statistics statistics1 = new Statistics();
+        // statistics1.addNumber(3);
+        // statistics1.addNumber(5);
+        // statistics1.addNumber(1);
+        // statistics1.addNumber(2);
+        // System.out.println("Count: " + statistics1.getCount());
+        // System.out.println("Sum: " + statistics1.sum());
+        // System.out.println("Average: " + statistics1.average());
+        // System.out.println();
 
-        Statistics odd = new Statistics();
-        Statistics even = new Statistics();
-        Statistics statistics2 = new Statistics();
-        Scanner cip = new Scanner(System.in);
-        while (true){
-            int input = Integer.valueOf(cip.nextLine());
-            if (input == -1){
-                break;
-            }
-            statistics2.addNumber(input);
+        // Statistics odd = new Statistics();
+        // Statistics even = new Statistics();
+        // Statistics statistics2 = new Statistics();
+        // Scanner cip = new Scanner(System.in);
+        // while (true){
+        //     int input = Integer.valueOf(cip.nextLine());
+        //     if (input == -1){
+        //         break;
+        //     }
+        //     statistics2.addNumber(input);
             
-            if (input % 2 == 0){
-                even.addNumber(input);
-            }
-            else {
-                odd.addNumber(input);
-            }
-        }
-        System.out.println("Sum: "+ statistics2.sum());
-        System.out.println("Even: "+ even.sum());
-        System.out.println("Odd: "+ odd.sum());
+        //     if (input % 2 == 0){
+        //         even.addNumber(input);
+        //     }
+        //     else {
+        //         odd.addNumber(input);
+        //     }
+        // }
+        // System.out.println("Sum: "+ statistics2.sum());
+        // System.out.println("Even: "+ even.sum());
+        // System.out.println("Odd: "+ odd.sum());
 
         
+        //Payment Card  (6 parts)
+        PaymentCard card1 = new PaymentCard(50);
+        System.out.println(card1);
+
+        card1.eatAffordably();
+        System.out.println(card1);
+
+        card1.eatHeartily();
+        card1.eatAffordably();
+        System.out.println(card1);
+        System.out.println();
+
+        PaymentCard card2 = new PaymentCard(5);
+        System.out.println(card2);
+
+        card2.eatHeartily();
+        System.out.println(card2);
+
+        card2.eatHeartily();
+        System.out.println(card2);
+        System.out.println();
+
+        PaymentCard card3 = new PaymentCard(10);
+        System.out.println(card3);
+
+        card3.addMoney(15);
+        System.out.println(card3);
+
+        card3.addMoney(10);
+        System.out.println(card3);
+
+        card3.addMoney(200);
+        System.out.println(card3);
+        System.out.println();
+
+        PaymentCard card4 = new PaymentCard(10);
+        System.out.println("Paul: " + card4);
+        card4.addMoney(-15);
+        System.out.println("Paul: " + card4);
+        System.out.println();
+
+        PaymentCard paulsCard = new PaymentCard(20);
+        PaymentCard mattsCard = new PaymentCard(30);
+        paulsCard.eatHeartily();
+        mattsCard.eatAffordably();
+        System.out.println("Paul: "+paulsCard);
+        System.out.println("Matt: "+mattsCard);
+        paulsCard.addMoney(20);
+        mattsCard.eatHeartily();
+        System.out.println("Paul: "+paulsCard);
+        System.out.println("Matt: "+mattsCard);
+        paulsCard.eatAffordably();
+        paulsCard.eatAffordably();
+        mattsCard.addMoney(50);
+        System.out.println("Paul: "+paulsCard);
+        System.out.println("Matt: "+mattsCard);
     }
         //     #1
         //     public static void printText(int times) {
