@@ -456,13 +456,27 @@ public class App
 
 
                                                                                     // Person
-        // Person ada = new Person("Ada");
-        // Person antti = new Person("Antti");
-        // Person martin = new Person("Martin");
+        //  Person matti = new Person("Matti");
+        //  Person juhana = new Person("Juhana");
+        //  Person toms = new Person("Tomas");
+        //  Person eduards = new Person("Eduards");
 
-        // ada.printPerson();
-        // antti.printPerson();
-        // martin.printPerson();
+        //  matti.setHeight(180);
+        //  matti.setWeight(86);
+    
+        //  juhana.setHeight(175);
+        //  juhana.setWeight(64);
+
+        //  toms.setHeight(173);
+        //  toms.setWeight(60);
+
+        // eduards.setHeight(178);
+        // eduards.setWeight(75);
+
+        // System.out.println(matti);
+        // System.out.println(juhana);
+        // System.out.println(toms);
+        // System.out.println(eduards);
 
 
                                                                                     // Product
@@ -471,40 +485,76 @@ public class App
 
 
                                                                                 // Decreasing counter
-        DecreasingCounter part1 = new DecreasingCounter(10);
+        // DecreasingCounter part1 = new DecreasingCounter(10);
 
-        part1.printValue();
+        // part1.printValue();
 
-        part1.decrement();
-        part1.printValue();
+        // part1.decrement();
+        // part1.printValue();
 
-        part1.decrement();
-        part1.printValue();
+        // part1.decrement();
+        // part1.printValue();
+        // System.out.println();
+
+        // DecreasingCounter part2 = new DecreasingCounter(2);
+
+        // part2.printValue();
+
+        // part2.decrement();
+        // part2.printValue();
+
+        // part2.decrement();
+        // part2.printValue();
+
+        // part2.decrement();
+        // part2.printValue();
+        // System.out.println();
+
+        // DecreasingCounter part3 = new DecreasingCounter(100);
+
+        // part3.printValue();
+
+        // part3.reset();
+        // part3.printValue();
+
+        // part3.decrement();
+        // part3.printValue();
+
+
+        //Statistics
+        Statistics statistics1 = new Statistics();
+        statistics1.addNumber(3);
+        statistics1.addNumber(5);
+        statistics1.addNumber(1);
+        statistics1.addNumber(2);
+        System.out.println("Count: " + statistics1.getCount());
+        System.out.println("Sum: " + statistics1.sum());
+        System.out.println("Average: " + statistics1.average());
         System.out.println();
 
-        DecreasingCounter part2 = new DecreasingCounter(2);
+        Statistics odd = new Statistics();
+        Statistics even = new Statistics();
+        Statistics statistics2 = new Statistics();
+        Scanner cip = new Scanner(System.in);
+        while (true){
+            int input = Integer.valueOf(cip.nextLine());
+            if (input == -1){
+                break;
+            }
+            statistics2.addNumber(input);
+            
+            if (input % 2 == 0){
+                even.addNumber(input);
+            }
+            else {
+                odd.addNumber(input);
+            }
+        }
+        System.out.println("Sum: "+ statistics2.sum());
+        System.out.println("Even: "+ even.sum());
+        System.out.println("Odd: "+ odd.sum());
 
-        part2.printValue();
-
-        part2.decrement();
-        part2.printValue();
-
-        part2.decrement();
-        part2.printValue();
-
-        part2.decrement();
-        part2.printValue();
-        System.out.println();
-
-        DecreasingCounter part3 = new DecreasingCounter(100);
-
-        part3.printValue();
-
-        part3.reset();
-        part3.printValue();
-
-        part3.decrement();
-        part3.printValue();
+        
     }
         //     #1
         //     public static void printText(int times) {
