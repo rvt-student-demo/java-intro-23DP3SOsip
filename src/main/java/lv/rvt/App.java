@@ -555,62 +555,96 @@ public class App
         // System.out.println("Odd: "+ odd.sum());
 
         
-        //Payment Card  (6 parts)
-        PaymentCard card1 = new PaymentCard(50);
-        System.out.println(card1);
+                                                                            //Payment Card  (6 parts)
+        // PaymentCard card1 = new PaymentCard(50);
+        // System.out.println(card1);
 
-        card1.eatAffordably();
-        System.out.println(card1);
+        // card1.eatAffordably();
+        // System.out.println(card1);
 
-        card1.eatHeartily();
-        card1.eatAffordably();
-        System.out.println(card1);
-        System.out.println();
+        // card1.eatHeartily();
+        // card1.eatAffordably();
+        // System.out.println(card1);
+        // System.out.println();
 
-        PaymentCard card2 = new PaymentCard(5);
-        System.out.println(card2);
+        // PaymentCard card2 = new PaymentCard(5);
+        // System.out.println(card2);
 
-        card2.eatHeartily();
-        System.out.println(card2);
+        // card2.eatHeartily();
+        // System.out.println(card2);
 
-        card2.eatHeartily();
-        System.out.println(card2);
-        System.out.println();
+        // card2.eatHeartily();
+        // System.out.println(card2);
+        // System.out.println();
 
-        PaymentCard card3 = new PaymentCard(10);
-        System.out.println(card3);
+        // PaymentCard card3 = new PaymentCard(10);
+        // System.out.println(card3);
 
-        card3.addMoney(15);
-        System.out.println(card3);
+        // card3.addMoney(15);
+        // System.out.println(card3);
 
-        card3.addMoney(10);
-        System.out.println(card3);
+        // card3.addMoney(10);
+        // System.out.println(card3);
 
-        card3.addMoney(200);
-        System.out.println(card3);
-        System.out.println();
+        // card3.addMoney(200);
+        // System.out.println(card3);
+        // System.out.println();
 
-        PaymentCard card4 = new PaymentCard(10);
-        System.out.println("Paul: " + card4);
-        card4.addMoney(-15);
-        System.out.println("Paul: " + card4);
-        System.out.println();
+        // PaymentCard card4 = new PaymentCard(10);
+        // System.out.println("Paul: " + card4);
+        // card4.addMoney(-15);
+        // System.out.println("Paul: " + card4);
+        // System.out.println();
 
-        PaymentCard paulsCard = new PaymentCard(20);
-        PaymentCard mattsCard = new PaymentCard(30);
-        paulsCard.eatHeartily();
-        mattsCard.eatAffordably();
-        System.out.println("Paul: "+paulsCard);
-        System.out.println("Matt: "+mattsCard);
-        paulsCard.addMoney(20);
-        mattsCard.eatHeartily();
-        System.out.println("Paul: "+paulsCard);
-        System.out.println("Matt: "+mattsCard);
-        paulsCard.eatAffordably();
-        paulsCard.eatAffordably();
-        mattsCard.addMoney(50);
-        System.out.println("Paul: "+paulsCard);
-        System.out.println("Matt: "+mattsCard);
+        // PaymentCard paulsCard = new PaymentCard(20);
+        // PaymentCard mattsCard = new PaymentCard(30);
+        // paulsCard.eatHeartily();
+        // mattsCard.eatAffordably();
+        // System.out.println("Paul: "+paulsCard);
+        // System.out.println("Matt: "+mattsCard);
+        // paulsCard.addMoney(20);
+        // mattsCard.eatHeartily();
+        // System.out.println("Paul: "+paulsCard);
+        // System.out.println("Matt: "+mattsCard);
+        // paulsCard.eatAffordably();
+        // paulsCard.eatAffordably();
+        // mattsCard.addMoney(50);s
+        // System.out.println("Paul: "+paulsCard);
+        // System.out.println("Matt: "+mattsCard);
+
+
+        //Book
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<Book> books = new ArrayList<>();
+        
+        while (true) {
+            System.out.print("Title: ");
+            String title = scanner.nextLine();
+                if (title.isEmpty()) {
+                    break;
+        }
+        
+        System.out.print("Pages: ");
+        int pages = Integer.parseInt(scanner.nextLine());
+        
+        System.out.print("Publication year: ");
+        int publicationYear = Integer.parseInt(scanner.nextLine());
+        
+        books.add(new Book(title, pages, publicationYear));
+        }
+        
+        System.out.print("What information will be printed? ");
+        String choice = scanner.nextLine();
+        
+        if (choice.equals("everything")) {
+            for (Book book : books) {
+                System.out.println(book);
+            }
+        } else if (choice.equals("name")) {
+            for (Book book : books) {
+                System.out.println(book.getTitle());
+            }
+        }
     }
         //     #1
         //     public static void printText(int times) {
