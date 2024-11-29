@@ -648,13 +648,28 @@ public class App
 
 
                                                                             // Constructor Overload
-        Product tapeMeasure = new Product("Tape measure");
-        Product plaster = new Product("Plaster", "home improvement section");
-        Product tyre = new Product("Tyre", 5);
+        // Product tapeMeasure = new Product("Tape measure");
+        // Product plaster = new Product("Plaster", "home improvement section");
+        // Product tyre = new Product("Tyre", 5);
 
-        System.out.println(tapeMeasure);
-        System.out.println(plaster);
-        System.out.println(tyre);
+        // System.out.println(tapeMeasure);
+        // System.out.println(plaster);
+        // System.out.println(tyre);
+
+
+                                                                                    // One Minute
+        Timer timer = new Timer();
+
+        while (true) {
+            System.out.println(timer);
+            timer.advance();
+            try {
+                Thread.sleep(10);
+            } 
+            catch (Exception e) {
+            
+            }
+        }
     }
         //     #1
         //     public static void printText(int times) {
