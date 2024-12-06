@@ -658,18 +658,53 @@ public class App
 
 
                                                                                     // One Minute
-        Timer timer = new Timer();
+        // Timer timer = new Timer();
 
-        while (true) {
-            System.out.println(timer);
-            timer.advance();
-            try {
-                Thread.sleep(10);
-            } 
-            catch (Exception e) {
+        // while (true) {
+        //     System.out.println(timer);
+        //     timer.advance();
+        //     try {
+        //         Thread.sleep(10);
+        //     } 
+        //     catch (Exception e) {
             
-            }
-        }
+        //     }
+        // }
+
+
+        //HealthStatiom (3 parts)
+        HealthStation childrensHospital = new HealthStation();
+
+        Person ethan = new Person("Ethan", 1, 110, 7);
+        Person peter = new Person("Peter", 33, 176, 85);
+    
+        // System.out.println(ethan.getName() + " weight: " + childrensHospital.weigh(ethan) + " kilos");
+        // System.out.println(peter.getName() + " weight: " + childrensHospital.weigh(peter) + " kilos");
+    
+        // childrensHospital.feed(ethan);
+        // childrensHospital.feed(ethan);
+        // childrensHospital.feed(ethan);
+    
+        // System.out.println("");
+    
+        // System.out.println(ethan.getName() + " weight: " + childrensHospital.weigh(ethan) + " kilos");
+        // System.out.println(peter.getName() + " weight: " + childrensHospital.weigh(peter) + " kilos");
+        System.out.println();
+        System.out.println("weighings performed: " + childrensHospital.weighings());
+
+        childrensHospital.weigh(ethan);
+        childrensHospital.weigh(peter);
+
+        System.out.println("weighings performed: " + childrensHospital.weighings());
+
+        childrensHospital.weigh(ethan);
+        childrensHospital.weigh(ethan);
+        childrensHospital.weigh(ethan);
+        childrensHospital.weigh(ethan);
+
+        System.out.println("weighings performed: " + childrensHospital.weighings());
+
+    
     }
         //     #1
         //     public static void printText(int times) {
