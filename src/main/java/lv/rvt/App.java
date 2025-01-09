@@ -672,7 +672,7 @@ public class App
         // }
 
 
-                                                                                //HealthStatiom (3 parts)
+                                                                                //HealthStation (3 parts)
         // HealthStation childrensHospital = new HealthStation();
 
         // Person ethan = new Person("Ethan", 1, 110, 7);
@@ -714,7 +714,7 @@ public class App
         // wasSuccessful = petesCard.takeMoney(4);
         // System.out.println("successfully withdrew: " + wasSuccessful);
         // System.out.println("money " + petesCard.balance());
-        System.out.println();
+        // System.out.println();
 
 
         // PaymentTerminal unicafeExactum = new PaymentTerminal();
@@ -741,18 +741,35 @@ public class App
         // System.out.println(unicafeExactum);
 
 
-        PaymentTerminal unicafeExactum = new PaymentTerminal();
-        System.out.println(unicafeExactum);
-        PaymentCard annesCard = new PaymentCard(2);
-        System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
-        boolean wasSuccessful = unicafeExactum.eatHeartily(annesCard);
-        System.out.println("there was enough money: " + wasSuccessful);
-        unicafeExactum.addMoneyToCard(annesCard, 100);
-        wasSuccessful = unicafeExactum.eatHeartily(annesCard);
-        System.out.println("there was enough money: " + wasSuccessful);
-        System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
-        System.out.println(unicafeExactum);
-    
+        // PaymentTerminal unicafeExactum = new PaymentTerminal();
+        // System.out.println(unicafeExactum);
+        // PaymentCard annesCard = new PaymentCard(2);
+        // System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
+        // boolean wasSuccessful = unicafeExactum.eatHeartily(annesCard);
+        // System.out.println("there was enough money: " + wasSuccessful);
+        // unicafeExactum.addMoneyToCard(annesCard, 100);
+        // wasSuccessful = unicafeExactum.eatHeartily(annesCard);
+        // System.out.println("there was enough money: " + wasSuccessful);
+        // System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
+        // System.out.println(unicafeExactum);
+
+                                                                            //Identical twins
+        SimpleDate date = new SimpleDate(24, 3, 2017);
+        SimpleDate date2 = new SimpleDate(23, 7, 2017);
+        
+        Person leo = new Person("Leo", date, 62, 9);
+        Person lily = new Person("Lily", date2, 65, 8);
+        
+        if (leo.equals(lily)) {
+            System.out.println("Is this quite correct?");
+        }
+        
+        Person leoWithDifferentWeight = new Person("Leo", date, 62, 10);
+        
+        if (leo.equals(leoWithDifferentWeight)) {
+            System.out.println("Is this quite correct?");
+        }
+
     }
         //     #1
         //     public static void printText(int times) {
