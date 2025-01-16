@@ -754,21 +754,37 @@ public class App
         // System.out.println(unicafeExactum);
 
                                                                             //Identical twins
-        SimpleDate date = new SimpleDate(24, 3, 2017);
-        SimpleDate date2 = new SimpleDate(23, 7, 2017);
+        // SimpleDate date = new SimpleDate(24, 3, 2017);
+        // SimpleDate date2 = new SimpleDate(23, 7, 2017);
         
-        Person leo = new Person("Leo", date, 62, 9);
-        Person lily = new Person("Lily", date2, 65, 8);
+        // Person leo = new Person("Leo", date, 62, 9);
+        // Person lily = new Person("Lily", date2, 65, 8);
         
-        if (leo.equals(lily)) {
-            System.out.println("Is this quite correct?");
-        }
+        // if (leo.equals(lily)) {
+        //     System.out.println("Is this quite correct?");
+        // }
         
-        Person leoWithDifferentWeight = new Person("Leo", date, 62, 10);
+        // Person leoWithDifferentWeight = new Person("Leo", date, 62, 10);
         
-        if (leo.equals(leoWithDifferentWeight)) {
-            System.out.println("Is this quite correct?");
-        }
+        // if (leo.equals(leoWithDifferentWeight)) {
+        //     System.out.println("Is this quite correct?");
+        // }
+
+                                                                                // Box
+        Box box = new  Box( 2.5, 5.0, 6.0 ) ;
+        System.out.println( "Area: "  + box.area() + " volume: " + box. volume() );
+        System.out.println( "topArea: "  + box.topArea() );
+
+        System.out.println("Box dimensions: " + "width: " + box.width() + " height: " + box.height() +  " length: " + box.lenght());
+
+        Box smallerBox = box.smallerBox(box);
+        System.out.println("Smaller Box dimensions: " + "width: " + smallerBox.width() + " height: " + smallerBox.height() + "length: " + smallerBox.lenght());
+
+        Box biggerBox = box.biggerBox(box);
+        System.out.println("Bigger Box dimensions: " + "width: " + biggerBox.width() + " height: " + biggerBox.height() + "length: " + biggerBox.lenght());
+
+        System.out.println("Does the original box nest inside the bigger box? " + box.nests(biggerBox));
+        System.out.println("Does the smaller box nest inside the original box? " + smallerBox.nests(box));
 
     }
         //     #1
