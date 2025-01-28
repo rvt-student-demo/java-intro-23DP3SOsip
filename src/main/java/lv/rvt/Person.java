@@ -7,6 +7,7 @@ public class Person {
     private int weight;
     private int height;
     private SimpleDate date;
+    private String adress;
 
     public Person(String name) {
         this(name, 0, 0, 0);
@@ -24,6 +25,11 @@ public class Person {
         this.weight = weight;
         this.age = age;
         this.date = date;
+    }
+
+    public Person(String name, String adress) {
+        this.name = name;
+        this.adress = adress;
     }
 
 
@@ -76,9 +82,9 @@ public class Person {
     }
     return false;
     }
-
+    
     @Override
     public String toString() {
-        return this.name + ", age " + this.age + " years";
+        return this.name + " \n " + this.adress;
     }
 }

@@ -771,20 +771,59 @@ public class App
         // }
 
                                                                                 // Box
-        Box box = new  Box( 2.5, 5.0, 6.0 ) ;
-        System.out.println( "Area: "  + box.area() + " volume: " + box. volume() );
-        System.out.println( "topArea: "  + box.topArea() );
+        // Box box = new  Box( 2.5, 5.0, 6.0 ) ;
+        // System.out.println( "Area: "  + box.area() + " volume: " + box. volume() );
+        // System.out.println( "topArea: "  + box.topArea() );
 
-        System.out.println("Box dimensions: " + "width: " + box.width() + " height: " + box.height() +  " length: " + box.lenght());
+        // System.out.println("Box dimensions: " + "width: " + box.width() + " height: " + box.height() +  " length: " + box.lenght());
 
-        Box smallerBox = box.smallerBox(box);
-        System.out.println("Smaller Box dimensions: " + "width: " + smallerBox.width() + " height: " + smallerBox.height() + "length: " + smallerBox.lenght());
+        // Box smallerBox = box.smallerBox(box);
+        // System.out.println("Smaller Box dimensions: " + "width: " + smallerBox.width() + " height: " + smallerBox.height() + "length: " + smallerBox.lenght());
 
-        Box biggerBox = box.biggerBox(box);
-        System.out.println("Bigger Box dimensions: " + "width: " + biggerBox.width() + " height: " + biggerBox.height() + "length: " + biggerBox.lenght());
+        // Box biggerBox = box.biggerBox(box);
+        // System.out.println("Bigger Box dimensions: " + "width: " + biggerBox.width() + " height: " + biggerBox.height() + "length: " + biggerBox.lenght());
 
-        System.out.println("Does the original box nest inside the bigger box? " + box.nests(biggerBox));
-        System.out.println("Does the smaller box nest inside the original box? " + smallerBox.nests(box));
+        // System.out.println("Does the original box nest inside the bigger box? " + box.nests(biggerBox));
+        // System.out.println("Does the smaller box nest inside the original box? " + smallerBox.nests(box));
+
+                                                                            // Person and subclasses (5 parts)
+        Person ada = new Person("Ada Lovelace", "24 Maddox St. London W1S 2QN");
+        Person esko = new Person("Esko Ukkonen", "Mannerheimintie 15 00100 Helsinki");
+        System.out.println(ada);
+        System.out.println(esko);
+        System.out.println();
+
+        Student ollie = new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028");
+        System.out.println(ollie);
+        System.out.println("Study credits " + ollie.credits());
+        ollie.study();
+        System.out.println("Study credits "+ ollie.credits());
+        System.out.println();
+
+        Student ollie1 = new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028");
+        System.out.println(ollie1);
+        ollie1.study();
+        System.out.println(ollie1);
+        System.out.println();
+
+        Teacher ada1 = new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200);
+        Teacher esko1 = new Teacher("Esko Ukkonen", "Mannerheimintie 15 00100 Helsinki", 5400);
+        System.out.println(ada1);
+        System.out.println(esko1);
+        Student ollie2 = new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028");
+        int i = 0;
+        while (i < 25) {
+          ollie2.study();
+          i = i + 1;
+        }
+        System.out.println(ollie2);
+        System.out.println();
+        
+        ArrayList<Person> persons = new ArrayList<Person>();
+        persons.add(new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200));
+        persons.add(new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028"));
+    
+        printPersons(persons);
 
     }
         //     #1
@@ -830,4 +869,11 @@ public class App
         //     }
         //     return array;
         // }
+
+                                                                            //Person and subclasses (5 parts)
+        public static void printPersons(ArrayList<Person> persons) {
+            for (Person person : persons) {
+              System.out.println(person);
+            }
+          }
 }
