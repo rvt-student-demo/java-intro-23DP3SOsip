@@ -787,43 +787,84 @@ public class App
         // System.out.println("Does the smaller box nest inside the original box? " + smallerBox.nests(box));
 
                                                                             // Person and subclasses (5 parts)
-        Person ada = new Person("Ada Lovelace", "24 Maddox St. London W1S 2QN");
-        Person esko = new Person("Esko Ukkonen", "Mannerheimintie 15 00100 Helsinki");
-        System.out.println(ada);
-        System.out.println(esko);
-        System.out.println();
+        // Person ada = new Person("Ada Lovelace", "24 Maddox St. London W1S 2QN");
+        // Person esko = new Person("Esko Ukkonen", "Mannerheimintie 15 00100 Helsinki");
+        // System.out.println(ada);
+        // System.out.println(esko);
+        // System.out.println();
 
-        Student ollie = new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028");
-        System.out.println(ollie);
-        System.out.println("Study credits " + ollie.credits());
-        ollie.study();
-        System.out.println("Study credits "+ ollie.credits());
-        System.out.println();
+        // Student ollie = new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028");
+        // System.out.println(ollie);
+        // System.out.println("Study credits " + ollie.credits());
+        // ollie.study();
+        // System.out.println("Study credits "+ ollie.credits());
+        // System.out.println();
 
-        Student ollie1 = new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028");
-        System.out.println(ollie1);
-        ollie1.study();
-        System.out.println(ollie1);
-        System.out.println();
+        // Student ollie1 = new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028");
+        // System.out.println(ollie1);
+        // ollie1.study();
+        // System.out.println(ollie1);
+        // System.out.println();
 
-        Teacher ada1 = new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200);
-        Teacher esko1 = new Teacher("Esko Ukkonen", "Mannerheimintie 15 00100 Helsinki", 5400);
-        System.out.println(ada1);
-        System.out.println(esko1);
-        Student ollie2 = new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028");
-        int i = 0;
-        while (i < 25) {
-          ollie2.study();
-          i = i + 1;
-        }
-        System.out.println(ollie2);
-        System.out.println();
+        // Teacher ada1 = new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200);
+        // Teacher esko1 = new Teacher("Esko Ukkonen", "Mannerheimintie 15 00100 Helsinki", 5400);
+        // System.out.println(ada1);
+        // System.out.println(esko1);
+        // Student ollie2 = new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028");
+        // int i = 0;
+        // while (i < 25) {
+        //   ollie2.study();
+        //   i = i + 1;
+        // }
+        // System.out.println(ollie2);
+        // System.out.println();
         
-        ArrayList<Person> persons = new ArrayList<Person>();
-        persons.add(new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200));
-        persons.add(new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028"));
+        // ArrayList<Person> persons = new ArrayList<Person>();
+        // persons.add(new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200));
+        // persons.add(new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028"));
     
-        printPersons(persons);
+        // printPersons(persons);
+
+
+                                                                                      // Warehousing (7 parts)
+        ProductWarehouse juice = new ProductWarehouse("Juice", 1000.0);
+        juice.addToWarehouse(1000.0);
+        juice.takeFromWarehouse(11.3);
+        System.out.println(juice.getName());
+        System.out.println(juice);
+        System.out.println();
+
+
+        ProductWarehouse juice1 = new ProductWarehouse("Juice", 1000.0);
+        juice1.addToWarehouse(1000.0);
+        juice1.takeFromWarehouse(11.3);
+        System.out.println(juice1.getName());
+        juice1.addToWarehouse(1.0);
+        System.out.println(juice1); 
+        System.out.println();
+
+
+        ProductWarehouseWithHistory juice2 = new ProductWarehouseWithHistory("Juice", 1000.0, 1000.0);
+        juice2.takeFromWarehouse(11.3);
+        System.out.println(juice2.getName()); 
+        juice2.addToWarehouse(1.0);
+        System.out.println(juice2);
+        System.out.println(juice2.history());
+        System.out.println();
+
+
+        ProductWarehouseWithHistory juice3 = new ProductWarehouseWithHistory("Juice", 1000.0, 1000.0);
+        juice3.takeFromWarehouse(11.3);
+        System.out.println(juice3.getName());
+        juice3.addToWarehouse(1.0);
+        System.out.println(juice3);
+        System.out.println(juice3.history());
+        System.out.println();
+
+        ProductWarehouseWithHistory juice4 = new ProductWarehouseWithHistory("Juice", 1000.0, 1000.0);
+        juice4.takeFromWarehouse(11.3);
+        juice4.addToWarehouse(1.0);
+        juice4.printAnalysis();
 
     }
         //     #1
@@ -871,9 +912,9 @@ public class App
         // }
 
                                                                             //Person and subclasses (5 parts)
-        public static void printPersons(ArrayList<Person> persons) {
-            for (Person person : persons) {
-              System.out.println(person);
-            }
-          }
+        // public static void printPersons(ArrayList<Person> persons) {
+        //     for (Person person : persons) {
+        //       System.out.println(person);
+        //     }
+        //   }
 }
