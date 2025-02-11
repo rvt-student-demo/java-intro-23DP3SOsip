@@ -1,6 +1,7 @@
 package lv.rvt;
 
 import java.util.Scanner;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -825,47 +826,53 @@ public class App
     
         // printPersons(persons);
 
-
                                                                                       // Warehousing (7 parts)
-        ProductWarehouse juice = new ProductWarehouse("Juice", 1000.0);
-        juice.addToWarehouse(1000.0);
-        juice.takeFromWarehouse(11.3);
-        System.out.println(juice.getName());
-        System.out.println(juice);
-        System.out.println();
+        // ProductWarehouse juice = new ProductWarehouse("Juice", 1000.0);
+        // juice.addToWarehouse(1000.0);
+        // juice.takeFromWarehouse(11.3);
+        // System.out.println(juice.getName());
+        // System.out.println(juice);
+        // System.out.println();
 
 
-        ProductWarehouse juice1 = new ProductWarehouse("Juice", 1000.0);
-        juice1.addToWarehouse(1000.0);
-        juice1.takeFromWarehouse(11.3);
-        System.out.println(juice1.getName());
-        juice1.addToWarehouse(1.0);
-        System.out.println(juice1); 
-        System.out.println();
+        // ProductWarehouse juice1 = new ProductWarehouse("Juice", 1000.0);
+        // juice1.addToWarehouse(1000.0);
+        // juice1.takeFromWarehouse(11.3);
+        // System.out.println(juice1.getName());
+        // juice1.addToWarehouse(1.0);
+        // System.out.println(juice1); 
+        // System.out.println();
 
 
-        ProductWarehouseWithHistory juice2 = new ProductWarehouseWithHistory("Juice", 1000.0, 1000.0);
-        juice2.takeFromWarehouse(11.3);
-        System.out.println(juice2.getName()); 
-        juice2.addToWarehouse(1.0);
-        System.out.println(juice2);
-        System.out.println(juice2.history());
-        System.out.println();
+        // ProductWarehouseWithHistory juice2 = new ProductWarehouseWithHistory("Juice", 1000.0, 1000.0);
+        // juice2.takeFromWarehouse(11.3);
+        // System.out.println(juice2.getName()); 
+        // juice2.addToWarehouse(1.0);
+        // System.out.println(juice2);
+        // System.out.println(juice2.history());
+        // System.out.println();
 
 
-        ProductWarehouseWithHistory juice3 = new ProductWarehouseWithHistory("Juice", 1000.0, 1000.0);
-        juice3.takeFromWarehouse(11.3);
-        System.out.println(juice3.getName());
-        juice3.addToWarehouse(1.0);
-        System.out.println(juice3);
-        System.out.println(juice3.history());
-        System.out.println();
+        // ProductWarehouseWithHistory juice3 = new ProductWarehouseWithHistory("Juice", 1000.0, 1000.0);
+        // juice3.takeFromWarehouse(11.3);
+        // System.out.println(juice3.getName());
+        // juice3.addToWarehouse(1.0);
+        // System.out.println(juice3);
+        // System.out.println(juice3.history());
+        // System.out.println();
 
-        ProductWarehouseWithHistory juice4 = new ProductWarehouseWithHistory("Juice", 1000.0, 1000.0);
-        juice4.takeFromWarehouse(11.3);
-        juice4.addToWarehouse(1.0);
-        juice4.printAnalysis();
+        // ProductWarehouseWithHistory juice4 = new ProductWarehouseWithHistory("Juice", 1000.0, 1000.0);
+        // juice4.takeFromWarehouse(11.3);
+        // juice4.addToWarehouse(1.0);
+        // juice4.printAnalysis();
 
+                                                                                            //Shapes
+        ArrayList<GeometricShape> shapes = new ArrayList<>();
+        shapes.add(new Circle(5));
+        shapes.add(new Triangle(5,4,6));
+        for (GeometricShape shape : shapes) {
+            shape.displayInfo();
+        }
     }
         //     #1
         //     public static void printText(int times) {
