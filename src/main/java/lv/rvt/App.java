@@ -1,13 +1,15 @@
 package lv.rvt;
 
 import java.util.Scanner;
+import java.io.BufferedReader;
 import java.lang.reflect.Array;
+import java.nio.Buffer;
 import java.util.ArrayList;
 import java.util.Random;
 
 public class App 
 {
-    public static void main( String[] args )
+    public static void main( String[] args ) throws Exception
     {
         // // Make your first Hello World app!
         // System.out.println("Once upon a time");
@@ -867,12 +869,29 @@ public class App
         // juice4.printAnalysis();
 
                                                                                             //Shapes
-        ArrayList<GeometricShape> shapes = new ArrayList<>();
-        shapes.add(new Circle(5));
-        shapes.add(new Triangle(5,4,6));
-        for (GeometricShape shape : shapes) {
-            shape.displayInfo();
+        // ArrayList<GeometricShape> shapes = new ArrayList<>();
+        // shapes.add(new Circle(5));
+        // shapes.add(new Triangle(5,4,6));
+        // for (GeometricShape shape : shapes) {
+        //     shape.displayInfo();
+        // }
+
+
+        //Helper
+        BufferedReader reader = Helper.getReader("persons.csv");
+        reader.readLine();
+        
+        // System.out.println(reader.readLine());
+        // System.out.println(reader.readLine());
+        // System.out.println(reader.readLine());
+
+        String line = reader.readLine();
+        while (line != null) {
+            System.out.println(line);
+            line = reader.readLine();
         }
+
+        System.out.println("Visas rindas ir izlasitas");
     }
         //     #1
         //     public static void printText(int times) {
