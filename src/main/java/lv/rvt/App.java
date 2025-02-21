@@ -877,21 +877,28 @@ public class App
         // }
 
 
-        //Helper
-        BufferedReader reader = Helper.getReader("persons.csv");
-        reader.readLine();
+                                                                                            //Helper
+        // BufferedReader reader = Helper.getReader("persons.csv");
+        // reader.readLine();
         
-        // System.out.println(reader.readLine());
-        // System.out.println(reader.readLine());
-        // System.out.println(reader.readLine());
+        // // System.out.println(reader.readLine());
+        // // System.out.println(reader.readLine());
+        // // System.out.println(reader.readLine());
 
-        String line = reader.readLine();
-        while (line != null) {
-            System.out.println(line);
-            line = reader.readLine();
+        // String line = reader.readLine();
+        // while (line != null) {
+        //     System.out.println(line);
+        //     line = reader.readLine();
+        // }
+
+        // System.out.println("Visas rindas ir izlasitas");
+
+
+        //PersonManager
+        ArrayList<Person> personList = PersonManager.getPersonList();
+        for (Person person : personList) {
+            System.out.println(person);
         }
-
-        System.out.println("Visas rindas ir izlasitas");
     }
         //     #1
         //     public static void printText(int times) {

@@ -32,6 +32,14 @@ public class Person {
         this.adress = adress;
     }
 
+    public Person(String name, int age, int height, int weight, String adress) {
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+        this.height = height;
+        this.adress = adress;
+    }
+
 
     public String getName() {
         return this.name;
